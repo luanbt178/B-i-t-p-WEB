@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+main{
+    margin-bottom: 300px;
+}
+
+hr{
+    border: 2px solid black;
+}
+
+.container {
+    position: relative;
+}
+
+.container .back_ground{
+    height: 670px;
+    width: 100%;
+}
+
+.logo{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: wheat;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    font-size: 35px;
+}
+
+.logo:hover{
+    cursor:pointer;
+}
+
+nav {
+    position: absolute; 
+    top: 20px; 
+    left: 0; 
+    width: 100%; 
+    z-index: 10; 
+}
+
+nav ul {
+    position: relative; 
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav .home {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.home li {
+    /* Vị trí mà #sub_nav phụ thuộc vào */
+    position: relative; 
+    text-transform: uppercase;
+    line-height: 20px;
+}
+
+.home li a:hover{
+    color: white;
+}
+
+.home a {
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    color:wheat; 
+    font-weight: bold;
+}
+
+
+#sub_nav {
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    /* Hiển thị menu ngay bên dưới cha */
+    top: 100%; 
+    left: 0;
+    padding: 10px;
+    z-index: 20;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(248, 244, 244, 0.1);
+}
+
+.home li:hover > #sub_nav {
+    /* Hiển thị khi hover */
+    display: block; 
+}
+
+#sub_nav li a {
+    padding: 5px 15px;
+    color:wheat;
+    text-decoration: none;
+    display: block;
+}
+
+#sub_nav li a:hover {
+    color:rgb(255, 255, 255);
+}
+
+/* Search icon */
+.ti-search{
+    position: absolute;
+    color: wheat;
+    top: 10px;
+    right: 150px;
+    font-size: 22px;
+}
+
+.ti-search:hover{
+    cursor: pointer;
+    color: white;
+}
+
+/* Cart */
+.ti-shopping-cart{
+    position: absolute;
+    color: wheat;
+    top: 8px;
+    right: 90px;
+    font-size: 27px;
+}
+
+.ti-shopping-cart:hover{
+    cursor: pointer;
+    color: white;
+}
+
+/* User icon */
+
+.ti-user{
+    position: absolute;
+    color: wheat;
+    top: 8px;
+    right: 30px;
+    font-size: 24px;
+}
+
+.ti-user:hover{
+    cursor: pointer;
+    color: white;
+}
+
+
+/* MAIN */
+
+/* Nike Row */
+.nike_row table{
+    padding: 20px 20px 20px 20px;
+    table-layout: fixed;
+    width: 100%; 
+    background: linear-gradient(0deg, white,rgb(36, 34, 34));
+}
+
+table td{
+    text-align: center;
+    vertical-align: middle;
+    color: rgb(70, 69, 69);
+    padding: 5px;
+}
+
+/* Img */
+table tr img{
+   display: flex;
+   max-width: 400px;
+   height: auto;
+   padding: 0px;
+   justify-content: center;
+   transition: 0.2s ease-in-out;
+}
+
+.nike_row img:hover{
+    box-shadow: 20px 25px 20px  rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+
+/* Discribe */
+
+.nike_row caption{
+    padding: 30px 0;
+    font-size: 30px;
+    background: linear-gradient(0deg, rgb(36, 34, 34), white);
+    font-weight: 550;
+}
+
+.nike_row caption p{
+    padding-top: 10px;
+    font-size: 17px;
+    color: white;
+}
+
+table h1{
+    text-align: start;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+.price{
+    color:black;
+    font-weight: 600;
+    padding-right: 60px;
+    padding-top: 10px;
+}
+
+.price span{
+    color: rgb(92, 91, 91);
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+.percent_off, .free_ship{
+    color: green;
+    font-weight: 600;
+}
+/* Icon */
+.ti-truck {
+    font-size: 20px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(44, 44, 44);
+}
+
+button{
+    color:white;
+    background: black;
+    border: hidden;
+    padding: 10px 13px;
+    font-size: 15px;
+    margin-bottom: 80px;
+}
+
+
+/* PRODUCT */
+
+#product_descr{
+    margin: 0 0 20px 50px;
+    font-size: 20px;
+    transition: transform 0.2s ease-out;
+}
+
+.ti-angle-double-right {
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+#product_descr:hover{
+    cursor: pointer;
+    transform: translateX(2%);
+}
+
+
+/* Transistion ảnh class product */
+.product td img{
+   width: 250px;
+   height: 250px;
+   display: block;
+   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+   padding: 0;
+   transition: box-shadow 0.3s ease-in-out;
+}
+
+
+/* Text khi hover ảnh */
+.img_container {
+    position: relative; 
+}
+
+.hover_text {
+    position: absolute;
+    bottom: 0; 
+    left: 40%;
+    transform: translate(-50%, 50%);
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0; 
+    transition: all 0.3s ease;
+}
+
+.img_container:hover .hover_text {
+    bottom: -50px;
+    opacity: 1;
+}
+
+.hover_text span{
+    color: green;
+}
+
+/* Carousel */
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    margin: 40px 0 100px 0;
+    padding: 20px 0;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.carousel-item {
+    flex: 0 0 25%; 
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 250px;
+    height: 250px;
+    display: block;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.carousel-item img:hover{
+    box-shadow: 20px 25px 20px  rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel .prev-btn {
+    left: 10px;
+}
+
+.carousel .next-btn {
+    right: 10px;
+}
+
+
+/* FOOTER */
+
+footer{
+    background-color: rgb(39, 38, 38);
+    max-width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+footer .logo_footer{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: wheat;
+    position: absolute;
+    top: 140px;
+    left: 160px;
+    font-size: 55px;
+}
+
+.logo_footer span{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 30px;
+    left: 179px;
+    font-size: 21px;
+}
+
+/* About us */
+
+.about{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 30px;
+    position: relative;
+    bottom: 20px;
+    left: 0px;
+}
+
+.about_us {
+    color:rgba(255, 255, 255, 0.7);
+    max-width:400px;
+    position: absolute;
+    top: 160px;
+    left: 460px;
+}
+
+/* Follow */
+
+.in4{
+    position: absolute;
+    color: rgba(255, 255, 255, 0.9);
+    top: 90px;
+    right: 225px;
+    font-size: 30px;
+    margin: 20px;
+}
+
+
+.icon_soci {
+    font-size: 20px;
+    color: white;
+    padding: 10px 10px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 35px;
+}
+
+.icon_soci i:hover{
+    cursor: pointer;
+    color: wheat;
+}
